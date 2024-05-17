@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Custom styles can be added here */
+    .navbar-brand {
+      color: skyblue ;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+      color: rgb(20, 18, 18); 
+    }
+    .navbar {
+      background-color: white !important; /* Set navbar background color to white */
+    }
+    .bg-light {
+      background-color: #121415 ; 
+    }
+    .file-upload {
+      border: 1px dashed #ccc;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius:20px;
+    }
+    .file-upload input[type="file"] {
+      display: none;
+    }
+    .file-upload label {
+      display: block;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .upload-icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+    .get-started-text {
+      font-weight: bold;
+      text-align: center;
+    }
+    .text-grey {
+      color: grey;
+    }
+    .promo-div {
+      background-color: #f8f9fa;
+      padding: 20px;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+    .promo-div:hover {
+      background-color: #d0c8c8;
+    }
+    .promo-div button {
+      width: 100%;
+    }
+    .promo-div hr {
+      margin: 15px 0;
+      border: 0.5px solid #ccc;
+    }
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+    }
+    .checkbox-container .checkmark {
+      width: 25px;
+      height: 25px;
+      border: 1px solid #ccc;
+      border-radius: 15px;
+      display: inline-block;
+      position: relative;
+      margin-right: 10px;
+    }
+    .checkbox-container .checkmark::after {
+      content: '';
+      position: absolute;
+      display: none;
+      left: 8px;
+      top: 4px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+    .checkbox-container input:checked + .checkmark::after {
+      display: block;
+    }
+    .checkbox-container input {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar Section -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <p style="padding:0px; margin: 0px; color: rgb(15, 105, 141);">GradeSchmer</p>
+        <!-- Adjust width as needed -->
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" style="color:black;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-light mr-2" href="#">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary" href="#">Try Your First Cover Letter for Free</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Section -->
+<div class="container py-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 style="font-weight:bold">Use AI to generate impactful Cover Letters in Seconds</h1>
+        <p>Step into your next career opportunity with confidence, using tailored cover letters that speak directly to your dream job's requirements.</p><br>
+        <p>You are seconds away from your free cover letters. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et tempora debitis eaque laudantium, dolorum sapiente deserunt autem neque a aliquid officiis, sint quod quis, vero sed culpa explicabo fugiat consequuntur!</p>
+        <div class="file-upload">
+          <label for="file"><i class="fas fa-upload upload-icon"></i>  </label>
+          <input type="file" id="file" name="file">
+          <button class="btn btn-primary mt-3" placeholder="Try Your First Cover Letter">Try Your First Cover Letter</button>
+          <p class="mt-3" style="color:grey;">Upload or drop a <b>CV</b> file here</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img src="E:\5th semester\Information security\movers & transport\Presento\assets\img\hero-bg.jpeg" class="img-fluid" alt="Picture">
+      </div>
+    </div>
+  
+    <!-- Additional Content -->
+    <div class="row mt-5">
+      <div class="col-md-12 text-center">
+        <h2 class="get-started-text">Get Started, Get Hired</h2>
+        <p class="text-grey">Unlock your career potential with GradeSchmer</p>
+      </div>
+    </div>
+  
+    <!-- Three Promo Divs with Sliders in a Single Row -->
+    <div class="row mt-3">
+      <div class="col-md-4">
+        <div class="promo-div">
+          <h4 class="text-center mb-4" style="color:rgb(30, 100, 170);">Basic</h4>
+          <!-- Carousel -->
+          <div id="carouselBasic" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <p class="text-center mt-4">€19.99 / month</p>
+              <hr>
+              <div class="checkbox-container">
+                <input type="checkbox" id="checkbox1">
+                <label class="checkmark" for="checkbox1"></label>
+                <p>Lorem ipsum dolor sit, earum voluptas consequatur!</p>
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" id="checkbox2">
+                <label class="checkmark" for="checkbox2"></label>
+                <p>amet consectetur adipisicing elit. Nam, quaerat doloremque. Numquam tempora cumque molestias, 2</p>
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" id="checkbox3">
+                <label class="checkmark" for="checkbox3"></label>
+                <p>amet consectetur adipisicing elit. Nam, quaerat doloremque. Numquam tempora cumque molestias, </p>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselBasic" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselBasic" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <!-- End Carousel -->
+          <hr>
+          <button class="btn btn-primary">Get Started</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="promo-div">
+          <h4 class="text-center mb-4" style="color:grey;">Advance(most popular)</h4>
+          <!-- Carousel -->
+          <div id="carouselAdvance" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <p class="text-center mt-4">€29.99 / month</p>
+              <hr>
+              <div class="checkbox-container">
+                <input type="checkbox" id="checkbox4">
+                <label class="checkmark" for="checkbox4"></label>
+                <p>amet consectetur adipisicing elit. Nam, quaerat doloremque. Numquam tempora cumque molestias, </p>
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" id="checkbox5">
+                <label class="checkmark" for="checkbox5"></label>
+                <p>amet consectetur adipisicing elit. Nam, quaerat doloremque. Numquam tempora cumque molestias, </p>
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" id="checkbox6">
+                <label class="checkmark" for="checkbox6"></label>
+                <p>amet consectetur adipisicing elit. Nam, quaerat doloremque. Numquam tempora cumque molestias, </p>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselAdvance" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselAdvance" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <!-- End Carousel -->
+          <hr>
+          <button class="btn btn-secondary">Get Started</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="promo-div">
+          <h4 class="text-center mb-4" style="color:green;">super-Charged</h4>
+          <p class="text-center mt-4">€39.99 / month</p>
+          <hr>
+          <div class="checkbox-container">
+            <input type="checkbox" id="checkbox7">
+            <label class="checkmark" for="checkbox7"></label>
+            <p>amet consectetur adipisicing elit. Nam, quaerat doloremque. Numquam tempora cumque molestias, </p>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="checkbox8">
+            <label class="checkmark" for="checkbox8"></label>
+            <p>amet consectetur adipisicing elit. Nam, quaerat doloremque. Numquam tempora cumque molestias, </p>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="checkbox9">
+            <label class="checkmark" for="checkbox9"></label>
+            <p>amet consectetur adipisicing elit. Nam, quaerat doloremque. Numquam tempora cumque molestias, </p>
+          </div>
+          <hr>
+          <button class="btn btn-success">Get Started</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bootstrap JS CDN -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+  make the last three divs in a single row
